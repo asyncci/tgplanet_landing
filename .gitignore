@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+#/out/ - for beget doesn't allow root access to install bun to compile there
 
 # production
 /build
