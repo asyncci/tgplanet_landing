@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Лендинг: Разработка Telegram-ботов</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#136dec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101822",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative w-full flex-col group/design-root overflow-x-hidden">
+<!-- HeroSection -->
+<div class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-start justify-end px-4 pb-10 @[480px]:px-10" data-alt="Abstract technological background with blue and purple gradients" style='background-image: linear-gradient(rgba(16, 24, 34, 0.4) 0%, rgba(16, 24, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTcuQppTxgdUtzMEtzkRgsrJKnAzb153VZ42E1wJG-FRhH0KFbf9LkDxhHqEBUiy1xmo7CYiTJnopZ2HOc1YyNlKrebuBdpgEcFXz4eC43ts0MJaUg9d30RlaWm6mjXe1DohXKP2T7rgehL4yl_gSgQ8ZUlKGBP2cEyETC01mbMDeN5DocEz1_dPtL74PFhGo_rnqoM9Q4ZMn2RRqoMHyB9U6QXCeIz72Pk8I6vVIE3NCwxrIZzzOUOXGcQoAJVDZ3a4kMWJtvCpg");'>
+<div class="flex flex-col gap-2 text-left">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    Разработка Telegram-ботов для вашего бизнеса
+                </h1>
+<h2 class="text-slate-300 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    Автоматизируйте рутину, увеличьте продажи и улучшите поддержку клиентов с помощью умных ботов.
+                </h2>
+</div>
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] w-full sm:w-auto" href="#contact-form">
+<span class="truncate">Получить бесплатную консультацию</span>
+</a>
+</div>
+</div>
+</div>
+<!-- FeatureSection -->
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-4">
+<h2 class="text-slate-900 dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+            Почему вашему бизнесу нужен Telegram-бот?
+        </h2>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal max-w-[720px]">
+            Боты работают 24/7, мгновенно отвечают клиентам и помогают вам сосредоточиться на самом важном — развитии бизнеса.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 p-0">
+<div class="flex flex-1 gap-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 flex-col">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">smart_toy</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Автоматизация 24/7</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Бот берет на себя рутинные задачи, от ответов на частые вопросы до приема заказов.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 flex-col">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">trending_up</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Рост продаж</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Прогревайте лидов, проводите их по воронке продаж и принимайте оплату прямо в Telegram.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 flex-col">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">headset_mic</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Поддержка клиентов</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Обеспечьте мгновенную поддержку вашим клиентам в любое время дня и ночи.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader for Carousel -->
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Примеры наших работ</h2>
+<!-- Carousel -->
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-3">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-[0_0_4px_rgba(0,0,0,0.05)] dark:shadow-none min-w-60">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Screenshot of an e-commerce bot interface in Telegram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAt3Q1ifeK0YIrIhI5GVttpNL1DD-M-ie9dCTOdzIXsSDTg63Q2Gw7Kg-5h2d8O7pBpKEBV0J9lbtbuXN2KXhXkM0uQhRNDsa1npcg2XWHT6R__Rx9mwoD8wS0fLSm-wgzeoPCNbdIqOm_pYNltMVeLpVx_ZHsRNf_ee3_r66MgC7aOciIB7XpqO2PxKCwjc0q35Vj9Z4NPcfql97GGWP26mC3YDyAfi2vxBcBVhSsX25HW2Gb-PXu53TlktzE-LrNH2lr79dJ-p80");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Бот для интернет-магазина</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Автоматизировал прием заказов и консультировал по товарам, увеличив конверсию на 15%.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-primary/20 text-primary dark:text-blue-300 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Подробнее</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-[0_0_4px_rgba(0,0,0,0.05)] dark:shadow-none min-w-60">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Interface of a real estate bot showing property listings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkpemf_bXDebqWiZ7ARZXwXYmJiS5bENhUsLvPHYtL6n3xDEMwwJaXI7l2KYMVTkHMmVkIH2pFSFddf80E4PenuT1_TPTBAV_MrFi64S9P0gTGNzrHcb9k_FVWR2kCzrJSf5pQ9O8fXdUtzYz-D_SkAP2YkTDDsa9tkXyO0U2oKRjDZAG2XQ9PKj3vB96LnFRvIsoKcFu2kLSW0LSeTQnbRhVxllZ37gCnf1OPAvORaSCrRCUrYYjmqBOj59yT1R1wBgNUa0kirgE");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Бот для агентства недвижимости</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Подбирал объекты по параметрам клиента и записывал на просмотры, сократив нагрузку на менеджеров.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-primary/20 text-primary dark:text-blue-300 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Подробнее</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-[0_0_4px_rgba(0,0,0,0.05)] dark:shadow-none min-w-60">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="An online course bot interface for student registration" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgq5DYYkiff7zVlBb_0ekRWd8YWHTJcYkfGLpjjpN78FeMCaROtWadYL3_pJK_j_-Jr4xRgrT092KVwejyPZxJ9Kl-q73DfPOoWgoUvVCzIMaNSaoRBKcco5m40KbuDl6baytqft6TM5sxS0MoDt-cyE010SGkIgQRTl1_xV1y945CnNkkmqc0LgnSt3nCfaGWJ4cL1fAkJwNnk4ebEiDVcCtXACS7cd-4q2MFAjjeGQgKGCz8SPmfySCDdMwlJ7B3D-QvyngttL0");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Бот для онлайн-школы</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Регистрировал на вебинары, рассылал учебные материалы и принимал оплату курсов.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-primary/20 text-primary dark:text-blue-300 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Подробнее</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader for "How it Works" -->
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Как мы работаем</h2>
+<!-- "How it Works" Section -->
+<div class="px-4 pb-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary font-bold">1</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Анализ и стратегия</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Обсуждаем ваши цели, анализируем бизнес-процессы и разрабатываем техническое задание.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary font-bold">2</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Разработка и тестирование</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Создаем бота согласно ТЗ, проводим тщательное тестирование всех функций.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary font-bold">3</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Запуск и поддержка</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Запускаем бота в работу, обучаем вас и оказываем техническую поддержку.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form Section -->
+<div class="bg-slate-100 dark:bg-slate-900/70 p-4 sm:p-6 md:p-8" id="contact-form">
+<div class="flex flex-col gap-4 max-w-lg mx-auto">
+<div class="text-center">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Готовы начать?</h2>
+<p class="text-slate-600 dark:text-slate-400 mt-1">Оставьте заявку, и мы свяжемся с вами для бесплатной консультации и расчета стоимости вашего проекта.</p>
+</div>
+<form class="flex flex-col gap-4 mt-4">
+<div>
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 sr-only" for="name">Имя</label>
+<input class="w-full h-12 px-4 rounded-lg bg-white dark:bg-background-dark border-slate-300 dark:border-slate-700 focus:ring-primary focus:border-primary" id="name" name="name" placeholder="Ваше имя" type="text"/>
+</div>
+<div>
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 sr-only" for="contact">Телефон или Telegram</label>
+<input class="w-full h-12 px-4 rounded-lg bg-white dark:bg-background-dark border-slate-300 dark:border-slate-700 focus:ring-primary focus:border-primary" id="contact" name="contact" placeholder="Телефон или Telegram" type="text"/>
+</div>
+<div>
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 sr-only" for="comment">Комментарий</label>
+<textarea class="w-full p-4 rounded-lg bg-white dark:bg-background-dark border-slate-300 dark:border-slate-700 focus:ring-primary focus:border-primary" id="comment" name="comment" placeholder="Кратко опишите вашу задачу (необязательно)" rows="3"></textarea>
+</div>
+<button class="flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-full" type="submit">
+                Отправить заявку
+            </button>
+</form>
+</div>
+</div>
+</div>
+</body></html>
