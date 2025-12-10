@@ -1,49 +1,50 @@
 'use client';
 
 import { useState, useRef } from "react";
+import { sendTelegramMessage } from "@/lib/telegram";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  setStatus("loading");
 
-    // Берём данные через FormData — это 100% надёжно
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name")?.toString().trim() || "",
-      contact: formData.get("contact")?.toString().trim() || "",
-      comment: formData.get("comment")?.toString().trim() || "",
-    };
+  const formData = new FormData(e.currentTarget);
+  const data = {
+    name: formData.get("name")?.toString().trim() || "",
+    contact: formData.get("contact")?.toString().trim() || "",
+    comment: formData.get("comment")?.toString().trim() || "",
+  };
 
-    // Валидация
-    if (!data.name || !data.contact) {
-      setStatus("error");
-      return;
-    }
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      const json = await res.json();
-
-      if (res.ok) {
-        setStatus("success");
-        formRef.current?.reset(); // ← теперь точно не null
-      } else {
-        throw new Error(json.error || "Ошибка сервера");
-      }
-    } catch (err) {
-      console.error("Ошибка отправки:", err);
-      setStatus("error");
-    }
+  if (!data.name || !data.contact) {
+    setStatus("error");
+    return;
   }
+
+  try {
+    const text = `
+        Новая заявка с сайта!
+
+        Имя: ${data.name}
+        Контакт: ${data.contact}
+        ${data.comment ? `Комментарий: ${data.comment}` : "Комментарий: —"}
+        `.trim();
+
+    const json = await sendTelegramMessage(text);
+
+    if (json.ok) {
+      setStatus("success");
+      formRef.current?.reset();
+    } else {
+      throw new Error(json.description);
+    }
+  } catch (err) {
+    console.error("Ошибка отправки:", err);
+    setStatus("error");
+  }
+}
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
